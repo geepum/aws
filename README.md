@@ -8,4 +8,6 @@ mv Downloads/[filename] .ssh/[filename]
 ```
 
 - change permissions of the pem file
-- `chmod 400 [filename]`
+```bash
+chmod 400 [filename]
+```
