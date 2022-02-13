@@ -4,17 +4,18 @@
 
 move the pem file to .ssh folder
 ```bash
-mv Downloads/[filename] .ssh/[filename]
-```
-\
-
-change permissions of the pem file
-```bash
-chmod 400 [filename]
+mv Downloads/[filename].pem .ssh/[filename].pem
 ```
 <br>
 
-testing
+change permissions of the pem file with the least permissions for security
 ```bash
-echo test
+chmod 400 [filename].pem
 ```
+<br>
+
+connect to the instance using the key
+```bash
+ssh -i ./[filename].pem [hostname]@[public IPv4 address]
+```
+<br>
