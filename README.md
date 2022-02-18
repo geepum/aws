@@ -1,6 +1,8 @@
 # AWS
 
-## key pairs
+## connecting
+
+#### key pairs for ec2 instance
 
 move the pem file to .ssh folder
 ```bash
@@ -19,3 +21,13 @@ connect to the instance using the key
 ssh -i ./[filename].pem [hostname]@[public IPv4 address]
 ```
 <br>
+
+connecting through bastion host
+```bash
+chmod 400 [key-name].pem # change permissions of the pem file
+ssh-add [key-name].pem # add identity
+ssh-add -A -i [key-name].pem ec2-user@[public IP] # A means agent forwarding
+ssh ec2-user@[private IP of private subnet] # now connecting to private subnet from bastion host
+```
+<br>
+
