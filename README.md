@@ -31,3 +31,17 @@ ssh ec2-user@[private IP of private subnet] # now connecting to private subnet f
 ```
 <br>
 
+format filesystem
+- `mkfs -t (ext4) (/dev/xvdf1)`
+<br>
+
+mount and unmount disk
+- `mount /dev/xvdf1 /mnt`
+- `umount /dev/xvdf1`
+- `mount -o nouuid /dev/xvdf1 /mnt`
+
+check disk and blocks
+- `lsblk (-f)`
+- `file -s (dev/xvdf)`
+- `fdisk -l`
+- `blkid`
